@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Sênior</title>
+    <style><%- bootstrapCSS %></style>
+</head>
+<body class="bg-light" style="font-family: system-ui, sans-serif;">
+    <div class="container my-5 text-center">
+        <div class="alert alert-danger shadow p-4 border-0" role="alert" style="border-radius: 8px;">
+            <h1 class="alert-heading h3 mb-3 fw-bold text-white">🏆 Área Ultra Restrita: Apenas Sêniores</h1>
+            <p class="mb-0 text-white">Parabéns, <strong><%= user.email %></strong>! O seu cargo de <span class="badge bg-dark text-uppercase"><%= user.role %></span> te dá passe livre total por aqui.</p>
+            <a href="/dashboard" class="btn btn-dark mt-4 fw-bold px-4" style="border-radius: 6px;">Voltar ao Painel</a>
+        </div>
+    </div>
+</body>
+</html>

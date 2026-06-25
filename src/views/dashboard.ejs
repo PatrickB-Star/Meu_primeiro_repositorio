@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Usuário</title>
+    <style><%- bootstrapCSS %></style>
+</head>
+<body class="bg-light" style="font-family: system-ui, sans-serif;">
+    <div class="container my-5">
+        <div class="card shadow p-4 border-0" style="border-radius: 8px;">
+            <h1 class="display-6 fw-bold">Bem-vindo, <span class="text-primary"><%= user.email %></span>!</h1>
+            <p class="lead mt-3">Seu nível atual no sistema é: 
+                <span class="badge text-uppercase p-2 <%= user.role === 'senior' ? 'bg-danger' : user.role === 'pleno' ? 'bg-warning text-dark' : 'bg-info text-white' %>" style="border-radius: 6px;">
+                    <%= user.role %>
+                </span>
+            </p>
+            <hr class="my-4">
+            <h3 class="h5 mb-3 fw-bold text-secondary">Navegação Restrita por Nível:</h3>
+            <div class="d-grid d-sm-flex gap-2">
+                <a href="/pagina-pleno" class="btn btn-warning fw-bold px-4 py-2" style="border-radius: 6px;">Acessar Área Pleno/Sênior</a>
+                <a href="/pagina-senior" class="btn btn-danger fw-bold px-4 py-2" style="border-radius: 6px;">Acessar Área Restrita Sênior</a>
+            </div>
+            <hr class="my-4">
+            <a href="/logout" class="btn btn-outline-secondary btn-sm" style="border-radius: 6px;">Sair do Sistema</a>
+        </div>
+    </div>
+</body>
+</html>

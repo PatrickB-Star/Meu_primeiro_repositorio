@@ -1,0 +1,18 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Pleno & Sênior</title>
+    <style><%- bootstrapCSS %></style>
+</head>
+<body class="bg-light" style="font-family: system-ui, sans-serif;">
+    <div class="container my-5 text-center">
+        <div class="alert alert-warning shadow p-4 border-0" role="alert" style="border-radius: 8px;">
+            <h1 class="alert-heading h3 mb-3 fw-bold text-dark">🌟 Área Exclusiva: Plenos e Sêniores</h1>
+            <p class="mb-0 text-dark">Olá, <strong><%= user.email %></strong>. Você possui o cargo de <span class="badge bg-dark text-uppercase"><%= user.role %></span> e seu acesso foi concedido!</p>
+            <a href="/dashboard" class="btn btn-dark mt-4 fw-bold px-4" style="border-radius: 6px;">Voltar ao Painel</a>
+        </div>
+    </div>
+</body>
+</html>

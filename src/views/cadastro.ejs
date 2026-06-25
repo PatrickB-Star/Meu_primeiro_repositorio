@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Quiz Tech</title>
+    <style><%- bootstrapCSS %></style>
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center" style="min-height: 100vh; margin: 0; font-family: system-ui, sans-serif;">
+    <div class="card shadow" style="width: 450px; border-radius: 8px; border: none; margin: 20px;">
+        <div class="card-body p-4 bg-white" style="border-radius: 8px;">
+            <h2 class="card-title h4 text-center mb-4 text-primary fw-bold">Crie sua Conta</h2>
+            
+            <% if (error) { %>
+                <div class="alert alert-danger py-2 text-center small"><%= error %></div>
+            <% } %>
+
+            <form action="/cadastro" method="POST">
+                <div class="mb-3">
+                    <label class="form-label fw-semibold small text-secondary">E-mail</label>
+                    <input class="form-control" type="email" name="email" placeholder="seu@email.com" required style="border-radius: 6px;">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold small text-secondary">Senha</label>
+                    <input class="form-control" type="password" name="senha" placeholder="Sua Senha" required style="border-radius: 6px;">
+                </div>
+                
+                <hr class="my-4">
+                <p class="text-muted text-center small mb-3">💡 Responda ao mini-quiz para definir seu cargo:</p>
+
+                <div class="mb-3">
+                    <label class="form-label small fw-semibold text-secondary">1. Qual template engine estamos utilizando neste sistema?</label>
+                    <input class="form-control" type="text" name="pergunta1" placeholder="Sua resposta" required style="border-radius: 6px;">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label small fw-semibold text-secondary">2. Qual biblioteca estamos utilizando para criptografar senhas?</label>
+                    <input class="form-control" type="text" name="pergunta2" placeholder="Sua resposta" required style="border-radius: 6px;">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 mt-3 py-2 fw-bold" style="border-radius: 6px;">Cadastrar</button>
+            </form>
+            <p class="text-center mt-3 mb-0 small text-muted">Já possui conta? <a href="/login" class="text-decoration-none">Faça Login</a></p>
+        </div>
+    </div>
+</body>
+</html>
