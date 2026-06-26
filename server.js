@@ -31,4 +31,4 @@ sequelize.sync({ force: false })
     .catch(err => {
         console.error('❌ Erro crítico: O Node não conseguiu conectar ao MySQL.', err.message);
         console.log('💡 Dica: Verifique se o MySQL está ligado e se a senha no arquivo .env está correta.');
-    });
+    }); 
